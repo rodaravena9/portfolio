@@ -3,91 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi Portafolio</title>
+  <title>Mi Portafolio / My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #1c1c1c; color: white; }
+    h2 { border-bottom: 1px solid #888; padding-bottom: 5px; margin-top: 30px; }
+    .idioma-btn { position: fixed; top: 10px; right: 10px; }
+  </style>
 </head>
 <body>
 
-  <!-- Barra de navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mi Portafolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Botón para cambiar idioma -->
+  <button class="btn btn-outline-light idioma-btn" onclick="toggleIdioma()">English / Español</button>
 
-  <!-- Sección Inicio -->
-  <header id="inicio" class="bg-primary text-white text-center py-5">
-    <div class="container">
-      <h1 class="display-4">¡Hola! Soy [Tu Nombre]</h1>
-      <p class="lead">Desarrollador Web | Diseñador | Freelancer</p>
-    </div>
-  </header>
+  <div class="container py-4">
+    <section id="sobre-mi">
+      <h2 data-es="SOBRE MÍ" data-en="ABOUT ME"></h2>
+      <p data-es="Titulado de Ingeniería informática con 3 años de experiencia en el mundo laboral. Sus principales fortalezas son: autonomía, fuerte compromiso con el trabajo, facilidad para trabajar en equipo, capacidad para asumir retos y rápida adaptación a los cambios. Edad: 28 años." 
+         data-en="Graduated in Computer Engineering with 3 years of work experience. Main strengths: autonomy, strong work commitment, teamwork skills, ability to take on challenges, and quick adaptability to changes. Age: 28."></p>
+    </section>
 
-  <!-- Sección Sobre mí -->
-  <section id="sobre-mi" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Sobre mí</h2>
-      <p class="text-center">[Aquí puedes escribir una breve descripción sobre ti, tu experiencia, habilidades, etc.]</p>
-    </div>
-  </section>
+    <section id="educacion">
+      <h2 data-es="EDUCACIÓN" data-en="EDUCATION"></h2>
+      <p><strong>DUOC UC. San Andrés Campus, Concepción</strong><br>
+        <span data-es="Ingeniería Informática 2017 - 2020" data-en="Computer Engineering 2017 - 2020"></span></p>
+      <p><strong data-es="Educación Básica y Media Colegio N°6 Angol, Angol" data-en="Primary and Secondary School Colegio N°6 Angol, Angol"></strong><br>
+        2001 - 2012</p>
+    </section>
 
-  <!-- Sección Proyectos -->
-  <section id="proyectos" class="bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Proyectos</h2>
-      <div class="row">
-        <!-- Proyecto 1 -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Proyecto 1">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 1</h5>
-              <p class="card-text">Descripción breve del proyecto.</p>
-            </div>
-          </div>
-        </div>
-        <!-- Repite para más proyectos -->
-      </div>
-    </div>
-  </section>
+    <section id="idiomas">
+      <h2 data-es="IDIOMAS" data-en="LANGUAGES"></h2>
+      <p><strong data-es="Inglés Nivel Intermedio" data-en="English Intermediate Level"></strong><br>
+         CERTIFICADO TOEIC BRIDGE</p>
+    </section>
 
-  <!-- Sección Contacto -->
-  <section id="contacto" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Contacto</h2>
-      <form>
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
-  </section>
+    <section id="cursos">
+      <h2 data-es="CERTIFICADOS Y CURSOS" data-en="CERTIFICATES & COURSES"></h2>
+      <ul>
+        <li data-es="Certificado en análisis y planificación de requerimientos informáticos." data-en="Certificate in analysis and planning of IT requirements."></li>
+        <li data-es="Certificado en análisis y desarrollo de modelos de datos." data-en="Certificate in data modeling and analysis."></li>
+        <li data-es="Certificado internacional en nivel intermedio." data-en="International certificate at intermediate level."></li>
+        <li data-es="Certificado en calidad de software." data-en="Certificate in software quality."></li>
+        <li data-es="Certificado en gestión de proyectos informáticos." data-en="Certificate in IT project management."></li>
+        <li data-es="Certificado en arquitectura de software." data-en="Certificate in software architecture."></li>
+        <li data-es="Certificado en inteligencia de negocios." data-en="Certificate in business intelligence."></li>
+        <li data-es="Certificado en programación de software." data-en="Certificate in software programming."></li>
+      </ul>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
-  </footer>
+    <section id="habilidades">
+      <h2 data-es="HABILIDADES Y TECNOLOGÍAS" data-en="SKILLS & TECHNOLOGIES"></h2>
+      <ul>
+        <li data-es="Trabajo en equipo" data-en="Teamwork"></li>
+        <li data-es="Resolución de problemas" data-en="Problem-solving"></li>
+        <li data-es="Programación (PHP, JavaScript, Python, C#, .NET, Java, TypeScript, NodeJS)" 
+            data-en="Programming (PHP, JavaScript, Python, C#, .NET, Java, TypeScript, NodeJS)"></li>
+        <li data-es="Administrar" data-en="Administration"></li>
+        <li data-es="Bases de datos SQL (Oracle, SQL Server, Access, MySQL)" data-en="SQL Databases (Oracle, SQL Server, Access, MySQL)"></li>
+        <li data-es="Desarrollo Web" data-en="Web Development"></li>
+        <li data-es="Adaptabilidad" data-en="Adaptability"></li>
+        <li data-es="Sistema Operativo Windows" data-en="Windows OS"></li>
+        <li data-es="Sistema Operativo Linux" data-en="Linux OS"></li>
+        <li data-es="Sistema Operativo Android" data-en="Android OS"></li>
+        <li data-es="Mantención Hardware y Software" data-en="Hardware & Software Maintenance"></li>
+        <li data-es="Manejo del Paquete de Microsoft Office" data-en="Microsoft Office Suite"></li>
+        <li data-es="Administración LMS Moodle" data-en="Moodle LMS Administration"></li>
+        <li data-es="Manejo de CMS Wordpress" data-en="WordPress CMS Management"></li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    let idioma = "es";
+    function toggleIdioma() {
+      idioma = idioma === "es" ? "en" : "es";
+      document.querySelectorAll("[data-es]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + idioma);
+      });
+    }
+    // Cargar idioma por defecto
+    window.onload = toggleIdioma;
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
